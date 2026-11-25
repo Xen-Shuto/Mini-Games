@@ -39,7 +39,7 @@
   const alternate=keyNames("left").slice(1).map((_,i)=>actions.map(a=>keyNames(a)[i+1]).join("・"));
   $("key-guide").textContent=alternate.join(" ／ ")+" にも対応。"+keyNames("pause").join(" / ")+" でポーズ。";
   $("power-desc").textContent="頭上の床を最大"+c.power.uses+"回壊せる";
-  $("super-desc").textContent=c.power.superSeconds+"秒間、無敵。"+c.resource.label+"＋"+c.resource.recovery;
+  $("super-desc").textContent=c.power.superSeconds+"秒間、無敵。霊力を少し回復。";
   $("resource-label").textContent=c.resource.label;$("gauge").max=c.resource.max;
   $("play-keys").textContent=keyNames("left")[0]+" "+keyNames("right")[0]+" 左右移動　"+keyNames("up")[0]+" 上昇　"+keyNames("pause")[0]+" ポーズ";
   function titleArt(){
