@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211d30"><title>お化けちゃんの冒険！</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script><script defer src="world.js"></script><script defer src="enemies.js"></script>
+  <script defer src="items.js"></script><script defer src="progress.js"></script><script defer src="game.js"></script>
+  <script defer src="art.js"></script><script defer src="media.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<main class="cabinet">
+  <header><div class="wordmark"><canvas data-icon="ghost" width="32" height="32" aria-hidden="true"></canvas>お化けちゃんの冒険！</div>
+    <button id="sound" class="quiet" aria-pressed="true"><span class="speaker" aria-hidden="true">◖))</span> 音声 ON</button></header>
+  <section id="title-screen">
+    <div class="poster">
+      <canvas id="poster" width="500" height="174" aria-label="月明かりの黄泉路で、石橋の上に立つ白いお化けちゃん"></canvas>
+      <div class="poster-copy"><div class="roman">OBAKE-CHAN ADVENTURE</div>
+      <h1>お化けちゃんの<br><strong>冒険<span>！</span></strong></h1>
+      <p>黄泉の国でのおつかいを終えて、<br>由良ちゃんの待つ場所へ帰ろう。</p></div>
+    </div>
+    <div class="mode-bar" id="courses" role="group" aria-label="難易度選択">
+      <template id="course-button"><button class="mode" type="button"><span aria-hidden="true"></span><span><b></b><small></small></span></button></template>
+    </div>
+    <div class="guide">
+      <section><h2>操作方法</h2><p><kbd id="left-key">←</kbd> <kbd id="right-key">→</kbd> 左右に移動　 <kbd id="up-key">↑</kbd> 上昇</p>
+        <p class="sub" id="key-guide"></p><p>1マスずつ上昇。穴を抜けて通路に出ると次の階へ。</p></section>
+      <section><h2>落ちてくるアイテム</h2>
+        <div class="feed"><canvas data-icon="power" width="32" height="32"></canvas><p><b>ちからぱわー</b><span id="power-desc"></span></p></div>
+        <div class="feed"><canvas data-icon="super" width="32" height="32"></canvas><p><b>むてきぱわー</b><span id="super-desc"></span></p></div></section>
+    </div>
+    <div class="record"><span aria-hidden="true">✧</span> 無限回廊の最高記録 <strong id="best"></strong></div>
+  </section>
+  <section id="game-screen" hidden>
+    <div class="hud">
+      <div><small id="mode-name"></small><b id="floor"></b></div><div><small>最高階</small><b id="highest"></b></div>
+      <div><small>得点</small><b id="score"></b></div><div><small>残機</small><b id="lives"></b></div>
+      <button id="pause" class="quiet" aria-label="ポーズ">Ⅱ</button>
+    </div>
+    <div class="board">
+      <canvas id="field" width="672" height="448" role="img" aria-label="黄泉の国の階層フィールド"></canvas>
+      <div id="overlay" hidden><div class="dialog" role="region" aria-labelledby="dialog-title">
+        <canvas id="ending-art" width="96" height="40" hidden></canvas>
+        <h2 id="dialog-title"></h2><p id="dialog-info"></p>
+        <div id="actions"><button id="continue" class="primary"></button><button id="back" class="secondary">タイトルへ</button></div>
+      </div></div>
+    </div>
+    <div class="status"><div class="resource"><label for="gauge" id="resource-label"></label><meter id="gauge" min="0"></meter><b id="resource"></b></div>
+      <b id="power-state"></b></div>
+    <div class="play-help"><span id="play-keys"></span><span id="goal"></span></div>
+    <div class="touch" aria-label="移動ボタン">
+      <button data-move="left" aria-label="左へ移動">◀</button><button data-move="right" aria-label="右へ移動">▶</button><button data-move="up" aria-label="上昇">▲</button>
+    </div>
+  </section>
+  <noscript>遊ぶにはブラウザの JavaScript を有効にしてね。</noscript>
+</main>
+</body></html>
