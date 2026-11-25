@@ -17,7 +17,8 @@
 
 ## 遊び方
 
-このフォルダの **index.html** をブラウザで開き、タイトルで「簡単」「普通」「困難」「無限回廊」から選んでね。  
+
+このフォルダの [**index.html**](https://xen-shuto.github.io/Mini-Games/otsukai/) をブラウザで開き、タイトルで「簡単」「普通」「困難」「無限回廊」から選んでね。  
 ゲーム本体は HTML、CSS、JavaScript、Canvas 2D、Web Audio で動作する。インストール、ビルド、通信は不要だよ。
 
 | 操作 | キー |
