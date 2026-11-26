@@ -6,7 +6,7 @@
 
 ## 遊び方
 
-このフォルダの **[index.html](index.html)** をブラウザで開き、タイトルの「GAME START」を選んでください。インストールは不要です。
+このフォルダの [**index.html**](https://xen-shuto.github.io/Mini-Games/daisakusen/) をブラウザで開き、タイトルの「GAME START」を選んでください。インストールは不要です。
 
 | キー | 操作 |
 |---|---|
