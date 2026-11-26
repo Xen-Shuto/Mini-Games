@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14121f"><title>お化けちゃんの大作戦！</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="stage" aria-label="お化けちゃんの大作戦！"><canvas id="game" width="640" height="480" aria-label="ゲーム画面。左右キーで移動、ZとXで人魂投下。Escでポーズ。"></canvas>
+<section id="overlay" aria-labelledby="heading"><div id="panel">
+<p id="eyebrow">おかえり、そして大作戦。</p><h1 id="heading">お化けちゃんの<br><strong>大作戦！</strong></h1><p id="message">地下から来る悪いヤツらを、人魂で迎え撃とう。</p>
+<div id="help" hidden>
+<p><b>← →</b> 移動　<b>Z</b> 左から投下　<b>X</b> 右から投下<br>長押しで連射・左右各3発。<b>Esc</b> ポーズ。</p>
+<p>人魂は接触すると爆発。深い敵ほど高得点！<br>同じ攻撃で続けて倒すと ×2 → ×3 → ×4。</p>
+<div id="item-guide"><p><b>てつのおもり</b> 敵と弾を貫通</p><p><b>はなび！</b> 半径96pxの大爆発</p><p><b>だんまく！</b> 最大7発を横一列に</p><p><b>ばりあー</b> 10秒間無敵</p><p><b>お化けちゃん</b> 残機が1増える</p></div>
+<p>光る敵からアイテム。攻撃アイテムは1つまで、<br>次の攻撃で必ず使用。残機0までのスコア勝負！<br>10,000 / 30,000 / 60,000 / 100,000点で残機+1。</p>
+</div>
+<nav id="menu"><button id="start">GAME START</button><button id="how">HOW TO PLAY</button><button id="resume" hidden>再開する</button><button id="retry" hidden>RETRY</button><button id="title" hidden>TITLE</button><button id="help-back" hidden>戻る</button></nav>
+</div></section>
+<aside id="audio" aria-label="音設定"><button id="bgm" aria-pressed="true">BGM ON</button><button id="sfx" aria-pressed="true">SE ON</button></aside>
+<button id="pause" hidden aria-label="ポーズ">Ⅱ</button>
+<div id="touch" aria-label="タッチ操作"><div><button data-key="left" aria-label="左へ移動">◀</button><button data-key="right" aria-label="右へ移動">▶</button></div><div><button data-key="z" aria-label="左側から投下">Z</button><button data-key="x" aria-label="右側から投下">X</button></div></div>
+</main><script src="config.js"></script><script src="engine.js"></script><script src="art.js"></script><script src="render.js"></script><script src="sound.js"></script><script src="app.js"></script></body></html>
